@@ -7,10 +7,31 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 
-<head></head>
-<body>
-<h1 style="color:blue">Acceso Permitido</h1>
-<h:graphicImage url="/img/logo.jpg" />
-</body>
+<h:head></h:head>
+<h:body>
+	<h1 style="color:blue">Inicio</h1>
+<!-- 	<h:graphicImage url="/img/logo.jpg" /> -->
+<table>
+  <tr>
+    <th>Usuarios</th>
+  </tr>
+  <tr>
+    <td>
+    	<h:commandLink value="Agregar" action="usuario" actionListener="#{UsuarioBean.actionAdd}" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+    	<h:commandLink value="Editar" action="usuario" actionListener="#{UsuarioBean.actionEdit}" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+    	<h:commandLink value="Buscar" action="usuario_buscar"/>
+    </td>
+  </tr>
+</table>
+
+</h:body>
 
 </html>
