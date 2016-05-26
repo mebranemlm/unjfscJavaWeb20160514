@@ -38,6 +38,14 @@ public class UsuarioDAOI implements UsuarioDAOL {
 	@Override
 	public Usuario questUser(Usuario obj) throws Exception{
 		Usuario letObj=new Usuario();
+		cn.open();
+		try {
+			letObj=cn.em.find(Usuario.class, obj);
+		} catch (Exception e) {
+			letObj=null;
+			System.out.println(e.getMessage());
+		}
+		cn.close();
 		return letObj;
 	}
 	
