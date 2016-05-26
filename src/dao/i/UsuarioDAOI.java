@@ -34,4 +34,26 @@ public class UsuarioDAOI implements UsuarioDAOL {
 		cn.close();
 		return ousu;
 	}
+	
+	@Override
+	public Usuario questUser(Usuario obj) throws Exception{
+		Usuario letObj=new Usuario();
+		return letObj;
+	}
+	
+	@Override
+	public void addUser(Usuario obj) throws Exception{
+		
+	}
+	
+	@Override
+	public void editUser(Usuario obj) throws Exception{
+		
+	}
+	
+	@Override
+	public List<Usuario> listUser(Usuario obj) throws Exception{
+		List<Usuario> letList =null;
+		return letList;
+	}
 }
