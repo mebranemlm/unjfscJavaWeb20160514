@@ -24,6 +24,17 @@
 		    <to-view-id>/xhtml/principal.xhtml</to-view-id>
 	    </navigation-case>
 	    
+	    <navigation-case>
+	    	<from-outcome>USUARIO</from-outcome>
+	    	<to-view-id>/xhtml/usuario.xhtml</to-view-id>
+	    </navigation-case>
+	    
+	    <navigation-case>
+	    	<from-outcome>USUARIO_BUSCAR</from-outcome>
+	    	<to-view-id>/xhtml/usuario_buscar.xhtml</to-view-id>
+	    </navigation-case>
+    
+	    
     </navigation-rule>
     
     

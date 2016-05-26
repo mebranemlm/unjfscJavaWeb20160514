@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14641836785930" configfile="/pypractice2/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="*" id="pf14641853379751" outlinks="pf14641853379752 pf14641853379753" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="*" id="pf14641853379751" outlinks="pf14641853379752 pf14641853379753 pf14642580400034 pf14642580400035" path="*"/>
   <nodes xsi:type="pageflow:PFPage" name="xhtml/error.xhtml" id="pf14641853379754" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14641853379752" path="/xhtml/error.xhtml"/>
   <nodes xsi:type="pageflow:PFPage" name="xhtml/principal.xhtml" id="pf14641853379755" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14641853379753" path="/xhtml/principal.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="xhtml/usuario.xhtml" id="pf14642580400036" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" inlinks="pf14642580400034" path="/xhtml/usuario.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="xhtml/usuario_buscar.xhtml" id="pf14642580400037" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" inlinks="pf14642580400035" path="/xhtml/usuario_buscar.xhtml"/>
   <links id="pf14641853379752" target="pf14641853379754" source="pf14641853379751" outcome="ERROR"/>
   <links id="pf14641853379753" target="pf14641853379755" source="pf14641853379751" outcome="SUCCESS"/>
+  <links id="pf14642580400034" target="pf14642580400036" source="pf14641853379751" outcome="USUARIO"/>
+  <links id="pf14642580400035" target="pf14642580400037" source="pf14641853379751" outcome="USUARIO_BUSCAR"/>
 </pageflow:Pageflow>
