@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"> 
 
 <h:head></h:head>
 <h:body>
@@ -14,8 +15,8 @@
 <tr align="center">
 	<td colspan="2">
 		<b>
-			<h:outputText value="Agregar" rendered="#{!UsuarioBean.actionEdit}"/>
-			<h:outputText value="Editar" rendered="#{UsuarioBean.actionEdit}"/>
+			<h:outputText value="Agregar" rendered="#{!UsuarioBean.sw_edit}"/>
+			<h:outputText value="Editar" rendered="#{UsuarioBean.sw_edit}"/>
 		</b>
 	</td>
 </tr>
@@ -24,8 +25,8 @@
 		<h:outputText value="Usuario"/>
 	</td>
 	<td>	
-		<h:inputText value="#{UsuarioBean.usua}" rendered="#{!UsuarioBean.actionEdit}"/>
-		<h:inputText disabled="true" value="#{UsuarioBean.usua}" rendered="#{UsuarioBean.actionEdit}"/> 
+		<h:inputText value="#{UsuarioBean.usua}" rendered="#{!UsuarioBean.sw_edit}"/>
+		<h:inputText disabled="true" value="#{UsuarioBean.usua}" rendered="#{UsuarioBean.sw_edit}"/> 
 	</td>
 </tr>
 <tr>
@@ -59,8 +60,8 @@
 </tr>
 <tr align="center">
 	<td colspan="2">
-		<p:commandButton value="Agregar" actionListener="#{UsuarioBean.addUser}" action="SUCCESS" rendered="#{!UsuarioBean.actionEdit}" icon="ui-icon-disk"/>
-		<p:commandButton value="Modificar" actionListener="#{UsuarioBean.editUser}" action="SUCCESS" rendered="#{UsuarioBean.actionEdit}"/>
+		<p:commandButton value="Agregar" actionListener="#{UsuarioBean.addUser}" action="SUCCESS" rendered="#{!UsuarioBean.sw_edit}" icon="ui-icon-disk"/>
+		<p:commandButton value="Modificar" actionListener="#{UsuarioBean.editUser}" action="SUCCESS" rendered="#{UsuarioBean.sw_edit}"/>
 	</td>
 </tr>
 </table>
