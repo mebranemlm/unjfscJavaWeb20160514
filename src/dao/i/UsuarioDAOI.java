@@ -27,8 +27,8 @@ public class UsuarioDAOI implements UsuarioDAOL {
 			}
 			
 		} catch (Exception e) {
-			 System.out.println("Error en UsuarioDAOI"+e.getMessage());
-//			JOptionPane.showMessageDialog(null,);
+			// System.out.println("Error en UsuarioDAOI"+e.getMessage());
+			JOptionPane.showMessageDialog(null,e.getMessage());
 			// TODO: handle exception
 		}
 		cn.close();
@@ -51,17 +51,57 @@ public class UsuarioDAOI implements UsuarioDAOL {
 	
 	@Override
 	public void addUser(Usuario obj) throws Exception{
-		
+		Usuario letObj= new Usuario();
+		//cn.open();
+		try {
+			letObj.setUsua(obj.getUsua());
+			letObj.setPass(obj.getPass());
+			letObj.setFreg(obj.getFreg());
+			letObj.setEsta(obj.getEsta());
+			cn.open();
+			cn.em.getTransaction().begin();
+			cn.em.persist(letObj);
+			cn.em.getTransaction().commit();
+		} catch (Exception e) {
+			cn.em.getTransaction().rollback();
+			cn.close();
+			JOptionPane.showMessageDialog(null, e.getMessage());
+			// TODO: handle exception
+		}
 	}
 	
 	@Override
 	public void editUser(Usuario obj) throws Exception{
-		
+		Usuario letObj= new Usuario();
+		//cn.open();
+		try {
+			letObj.setUsua(obj.getUsua());
+			letObj.setPass(obj.getPass());
+			letObj.setFreg(obj.getFreg());
+			letObj.setEsta(obj.getEsta());
+			cn.open();
+			cn.em.getTransaction().begin();
+			cn.em.merge(letObj);
+			cn.em.getTransaction().commit();
+		} catch (Exception e) {
+			cn.em.getTransaction().rollback();
+			cn.close();
+			JOptionPane.showMessageDialog(null, e.getMessage());
+			// TODO: handle exception
+		}
 	}
 	
 	@Override
 	public List<Usuario> listUser(Usuario obj) throws Exception{
 		List<Usuario> letList =null;
+		try {
+			Query q= cn.em.createQuery("select a from Usuario a where a.usua=:p1");
+			q.setParameter("p1", obj.getUsua());
+			letList=q.getResultList();
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, e.getMessage());
+			// TODO: handle exception
+		}
 		return letList;
 	}
 }
