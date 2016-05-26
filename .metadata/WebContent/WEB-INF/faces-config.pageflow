@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14641836785930" configfile="/pypractice2/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" id="pf14641853379751" outlinks="pf14641853379752 pf14641853379753" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="xhtml/error.xhtml" id="pf14641853379754" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14641853379752" path="/xhtml/error.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="xhtml/principal.xhtml" id="pf14641853379755" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14641853379753" path="/xhtml/principal.xhtml"/>
+  <links id="pf14641853379752" target="pf14641853379754" source="pf14641853379751" outcome="ERROR"/>
+  <links id="pf14641853379753" target="pf14641853379755" source="pf14641853379751" outcome="SUCCESS"/>
+</pageflow:Pageflow>
