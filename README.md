@@ -2,6 +2,11 @@
 Proyecto Java Web del 2016/05/14
 #BD - Oracle
 
+drop table t_usuario;
+commit;
+drop table t_docente;
+commit;
+
 create table t_usuario(
 usua varchar2(50) primary key not null,
 pass varchar2(50),
